@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL= "https://smarthostel.eu-north-1.elasticbeanstalk.com";
+const BASE_URL = "https://smarthostel.eu-north-1.elasticbeanstalk.com";
 // 🔹 Common Axios instance
 const api = axios.create({
   baseURL: BASE_URL,
