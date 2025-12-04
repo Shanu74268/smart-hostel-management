@@ -1,0 +1,160 @@
+/* Wrapper */
+.profile-wrapper {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.profile-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f1f1f;
+  letter-spacing: 0.5px;
+}
+
+/* Message */
+.profile-message {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #007bff;
+  animation: fadePulse 1.4s ease-in-out infinite alternate;
+}
+
+/* Profile card */
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 2rem;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  align-items: flex-start;
+}
+
+/* Left & Right */
+.profile-left {
+  flex: 1;
+  text-align: center;
+}
+.profile-right {
+  flex: 2;
+}
+
+/* Profile picture - modern glass look */
+.friendly-upload, .profile-pic-square {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid rgba(0,123,255,0.7);
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.friendly-upload:hover, .profile-pic-square:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.profile-form input, .profile-form select {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.profile-form input:focus, .profile-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 8px 20px rgba(0,123,255,0.2);
+}
+
+/* Buttons */
+.profile-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.profile-btn:hover {
+  background: linear-gradient(135deg, #0056d2, #007bff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Loader */
+.profile-loader, .submission-loader {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007bff;
+}
+.submission-loader {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,123,255,0.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.spinner {
+  width:60px; height:60px;
+  border:6px solid rgba(0,0,0,0.1);
+  border-top:6px solid #007bff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin-bottom:20px;
+}
+
+/* Animations */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadePulse { from {opacity:0.7;} to {opacity:1;} }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .friendly-upload, .profile-pic-square {
+    width: 35vw;
+    height: 35vw;
+    max-width: 140px;
+    max-height: 140px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

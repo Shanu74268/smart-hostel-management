@@ -1,0 +1,78 @@
+.messmenu-wrapper {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff, #f3f6ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.messmenu-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e2a78;
+  margin-bottom: 0.5rem;
+}
+
+.messmenu-subtitle {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 15px;
+}
+
+.messmenu-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.messmenu-table th {
+  background: #007bff;
+  color: white;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.messmenu-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e6f1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.messmenu-table tr:hover {
+  background: rgba(0, 123, 255, 0.08);
+  transform: scale(1.01);
+  transition: 0.2s ease;
+}
+
+.messmenu-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .messmenu-wrapper {
+    padding: 1rem;
+  }
+  .messmenu-title {
+    font-size: 1.6rem;
+  }
+  .messmenu-table th,
+  .messmenu-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

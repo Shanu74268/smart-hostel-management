@@ -1,0 +1,42 @@
+config:
+  target: "http://localhost:8080"   # 👈 Replace with your backend or frontend port
+  phases:
+    - duration: 30                  # Run for 30 seconds
+      arrivalRate: 5                # 5 new users per second (warm-up)
+      name: Warm-up
+    - duration: 60
+      arrivalRate: 20               # 20 users per second
+      name: Medium Load
+    - duration: 60
+      arrivalRate: 50               # 50 users per second (stress)
+      name: Heavy Load
+
+  # Default headers for all requests
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: Test Home Page
+    flow:
+      - get:
+          url: "/"
+      - think: 2                     # wait 2 seconds to simulate real user behavior
+
+  - name: Test Student Profile
+    flow:
+      - get:
+          url: "/student/profile"
+      - think: 2
+
+  - name: Test Gate Pass
+    flow:
+      - get:
+          url: "/gatepass"
+      - think: 2
+
+  - name: Test Complaint
+    flow:
+      - get:
+          url: "/complaint"
+      - think: 2

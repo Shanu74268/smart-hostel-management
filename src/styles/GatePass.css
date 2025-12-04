@@ -1,0 +1,235 @@
+.gatepass-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.gatepass-left, .gatepass-right {
+  flex: 1;
+  min-width: 350px;
+}
+
+.gatepass-card {
+  background: #fff;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+/* Description text */
+.form-description {
+  font-size: 0.95rem;
+  color: #979696;
+  margin-bottom: 15px;
+}
+
+/* Horizontal Premium Student Info */
+.student-info.horizontal {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f3f6fb);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.student-image-wrapper {
+  flex-shrink: 0;
+}
+
+.student-avatar-square {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #2563eb;
+}
+
+.student-details-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 6px;
+  margin-left: 5px;
+}
+
+.student-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  font-size: 0.82rem;
+  color: #1e293b;
+}
+
+.student-row p { margin: 0; }
+
+/* Form Inputs */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  cursor: text;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 12px 12px 32px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.input-wrapper input:focus {
+  border-color: #2563eb;
+}
+
+.input-wrapper label {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.input-wrapper.filled label,
+.input-wrapper input:focus + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: #2563eb;
+  background: #fff;
+  padding: 0 4px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 8px;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Leave Type */
+.leave-type-section.horizontal-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.leave-type-title {
+  font-weight: 400;
+  margin: 0;
+}
+
+.leave-type-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.pill-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.pill-radio input { display: none; }
+
+.pill-radio.selected {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Table Styling */
+.requests-table-wrapper { overflow-x: auto; }
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.requests-table th, .requests-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.requests-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.requests-table tr:hover { background-color: #f9fafb; }
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-badge.pending { background-color: #f59e0b; }
+.status-badge.approved { background-color: #10b981; }
+.status-badge.rejected { background-color: #ef4444; }
+
+.no-requests {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gatepass-wrapper { flex-direction: column; }
+  .student-details-horizontal .student-row {
+    grid-template-columns: 1fr;
+  }
+}

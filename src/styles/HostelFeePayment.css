@@ -1,0 +1,127 @@
+.payment-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.payment-left, .payment-right {
+  flex: 1;
+  min-width: 350px;
+}
+
+.payment-card {
+  background: #fff;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+/* Student Info */
+.student-info.horizontal {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f3f6fb);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.student-image-wrapper {
+  flex-shrink: 0;
+}
+
+.student-avatar-square {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #2563eb;
+}
+
+.student-details-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 6px;
+  margin-left: 5px;
+}
+
+.student-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.student-row p { margin: 0; }
+
+/* Buttons */
+.pay-now-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pay-now-btn:hover { background-color: #1e40af; }
+
+.confirm-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.confirm-btn:hover { background-color: #1e8449; }
+
+/* QR Section */
+.qr-section { text-align: center; margin-top: 15px; }
+.qr-image { width: 200px; height: 200px; object-fit: contain; border-radius: 12px; }
+.upi-id { margin-top: 10px; font-weight: 500; color: #16a085; }
+.timer { margin-top: 10px; font-weight: bold; color: #c0392b; }
+
+/* Payment History Table */
+.requests-table-wrapper { overflow-x: auto; }
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.requests-table th, .requests-table td { padding: 12px; border-bottom: 1px solid #e5e7eb; }
+.requests-table th { background-color: #f3f4f6; font-weight: 600; }
+.status-badge { padding: 5px 10px; border-radius: 8px; font-weight: 600; color: white; text-transform: uppercase; }
+.status-badge.paid { background-color: #10b981; }
+.status-badge.pending { background-color: #f59e0b; }
+
+.no-requests { color: #6b7280; font-style: italic; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .payment-wrapper { flex-direction: column; }
+  .student-details-horizontal .student-row { grid-template-columns: 1fr; }
+}
