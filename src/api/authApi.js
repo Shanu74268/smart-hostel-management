@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://hostel-management-backend-cil5.onrender.com";
 
 // 🔹 Common Axios instance
 const api = axios.create({
