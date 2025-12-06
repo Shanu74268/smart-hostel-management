@@ -95,7 +95,7 @@ const Login = () => {
         try {
           console.log("🔍 Checking student profile completion...");
           const statusRes = await axios.get(
-            "http://localhost:8080/student/profile/status",
+            "https://hostel-management-backend-cil5.onrender.com/student/profile/status",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
