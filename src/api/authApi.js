@@ -1,10 +1,6 @@
 import axios from "axios";
 
-<<<<<<< HEAD
 const BASE_URL = "https://hostel-management-backend-cil5.onrender.com";
-=======
-const BASE_URL = "https://smarthostel.eu-north-1.elasticbeanstalk.com";
->>>>>>> cd037589186ef1d7793fd255227f85ea257b8627
 
 // 🔹 Common Axios instance
 const api = axios.create({
